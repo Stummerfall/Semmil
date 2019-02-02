@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Оценить html верстку бесплатно.">
+	<meta name="keywords" content="Семен Милохин, сайт Семена Милохина, Семён Милохин, сайт Семёна Милохина, Semen Milokhin, semmil, css верстка, html верстка, заказать верстку сайта, адаптивная верстка, верстальщик, responsive, адаптив, верстка сайта, сверстать дизайн, сверстать psd, сверстать макет">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<title>Semmil | Заказать верстку</title>
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon16x16.jpg">
+	<link rel="stylesheet" href="css/all.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header class="header" id="header">
+		<div class="container">
+			<div class="logo">
+				<span class="logo-first-part">Semen</span>
+				<span class="logo-second-part">Milokhin</span>
+			</div>
+			<nav class="header-navigation">
+				<a href="/">Главная</a>
+				<a href="portfolio.html">Портфолио</a>
+				<a href="assessment.html">Заказать</a>
+				<a href="contact.html">Связаться</a>
+			</nav>
+		</div>
+	</header>
+	<section class="order single" id="order">
+		<div class="container">
+			<h3 class="section-title single">Пришлите ваш дизайн на оценку!</h3>
+			<form id="assessment-form" class="form-validate" action="#" method="post">
+				<div class="field-group">
+					<fieldset class="field-info">
+						<div class="field-title">Какая верстка вам нужна?</div>
+						<ul class="choice">
+							<li class="choice__item">
+								<input class="choice__radio" type="radio" name="type" id="static" data-num="1" data-text="Фиксированная" value="static" checked>
+								<label for="static" class="choice__label">Фиксированная</label>
+								<i class="choice__annotation annotation fas fa-question-circle"></i>
+							</li>
+							<li class="choice__item">
+								<input class="choice__radio" type="radio" name="type" id="stretch" data-num="1.2" data-text="Резиновая" value="stretch">
+								<label for="stretch" class="choice__label">Резиновая</label>
+								<i class="choice__annotation annotation fas fa-question-circle"></i>
+							</li>
+							<li class="choice__item">
+								<input class="choice__radio" type="radio" name="type" id="adaptive" data-num="1" data-text="Адаптивная" value="adaptive">
+								<label for="adaptive" class="choice__label">Адаптивная</label>
+								<i class="choice__annotation annotation fas fa-question-circle"></i>
+							</li>
+						</ul>
+						<input type="text" hidden="hidden" name="widtype">
+						<div class="pages input-num">
+							<label class="number-label">
+								Страниц
+								<input class="number pages-num" type="text" name="pages-num" data-min="1" value="1" data-max="99">
+							</label>
+							<div class="arrows">
+								<div class="up"></div>
+								<div class="down"></div>
+							</div>
+						</div>
+						<div class="breakpoints input-num hidden">
+							<label class="number-label">
+								Брейкпоинтов
+								<input class="number break-num" type="text" readonly data-min="2" value="2" data-max="99">
+							</label>
+							<div class="arrows">
+								<div class="up"></div>
+								<div class="down"></div>
+							</div>
+							<input type="text" name="breakpoints-num" hidden="hidden">
+						</div>
+						<div class="count">
+							<div class="count__title">
+								Ориентировочная стоимость: 
+								<span class="total"></span>₽
+								<input type="text" name="total" hidden="hidden">
+							</div>
+							<div class="count__info">
+								Это ориентировочная оценка верстки исходя из подобных по объему проектов, без динамики и js-программирования. Все задачи оцениваются по времени. У меня нет определенной фиксированной цены проекта или страницы, так как уходит разное время на работу. На стоимость влияет дизайн, объем работы и сложность задач. Каждый проект оценивается индивидуально. Итоговая цена может отличаться как в большую, так и в меньшую сторону.
+							</div>
+						</div>
+						<div class="check">
+							<input type="checkbox" class="dynamics" id="dynamics" name="dynamics">
+							<label for="dynamics" class="dynamics-label">Требуется динамика на CSS3 и JS</label>
+							<i class="annotation fas fa-question-circle"></i>
+							<input type="text" name="isDynamics" hidden="hidden">
+						</div>
+					</fieldset>
+					<fieldset class="field-contacts scroll-here">
+						<div class="field-row">
+							<label class="input-label required" for="name">Ваше имя</label>
+							<input class="input" type="text" name="name" id="name">
+						</div>
+						<div class="field-row">
+							<label class="input-label required" for="email">Ваша электронная почта</label>
+							<input class="input" type="email" name="email" id="email">
+						</div>
+						<div class="field-row">
+							<label class="input-label required" for="deadline">Сроки</label>
+							<input class="input" type="text" name="deadline" id="deadline">
+						</div>
+						<div class="field-row">
+							<label class="input-label required" for="link">Ссылка на архив с макетами</label>
+							<input class="input last-input-in-field" type="url" name="link" id="link">
+						</div>
+					</fieldset>
+				</div>
+				<fieldset class="field-comment">
+					<label class="comment-label" for="comment">
+						<span class="if-dynamics-checked">Описание динамики на CSS3 и JS.&#8194;</span>Неочевидные детали, необходимые для вас опции, техническое задание.
+					</label>
+					<textarea class="comment" name="comment" id="comment" maxlength="10000"></textarea>
+				</fieldset>
+				<div class="buttons">
+					<input type="button" class="btn btn-submit" id="btn-submit" value="Отправить на оценку">
+				</div>
+			</form>
+		</div>
+	</section>
+	<footer class="footer" id="footer">
+		<div class="container">
+			<div class="footer-info">
+				<div class="copyright">
+					<i class="far fa-copyright"></i>
+					2019 semmil.site
+				</div>
+				<div class="email">
+					<i class="far fa-envelope"></i>
+					semmil@gmail.com
+				</div>
+			</div>
+			<nav class="footer-navigation">
+				<a href="/">Главная</a>
+				<a href="portfolio.html">Портфолио</a>
+				<a href="assessment.html">Заказать</a>
+				<a href="contact.html">Связаться</a>
+			</nav>
+			<ul class="social">
+				<li>
+					<a href="https://vk.com/id331541355" target="_blank">
+						<i class="fab fa-vk"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/common.js"></script>
+</body>
+</html>
